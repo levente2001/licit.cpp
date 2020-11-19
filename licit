@@ -1,0 +1,57 @@
+#include "std_lib_facilities.h"
+
+int main()
+
+
+{
+	
+	cout << "Szia eladóvá vállt lapos tévém-et szeretném árverésre bocsátani, " <<endl;
+	cout << "várom a liciteket, aki a számomra legmegfelelőbb összeget mondja, " <<endl;
+	cout << "azé lesz a tévé!" <<endl;
+	cout << "Az ellenfeled Péter lesz."<<endl<<endl;
+	int kezdolicit = 15000;
+	cout << "Kezdő licit: " <<kezdolicit<< "Ft!" <<endl;
+
+	int licitterm;
+
+	
+
+	do
+	{
+		int licitgep;
+
+		cin >> licitterm;
+
+
+		while (licitterm < kezdolicit)
+
+		{
+			cout << "Az általad kínált összeg nem elegendő, kérlek kínálj többet!" <<endl<<endl;
+
+			cin >> licitterm;
+		}
+
+		int licitpeter = licitterm + 25000;
+
+		if (licitterm >= kezdolicit)
+		{
+			cout << "Péter licitje: " <<licitpeter<< "Ft" <<endl;
+		}
+		int vegosszeg = 650000;
+
+		switch (licitterm >= vegosszeg)
+		{
+			cout << "GRATULÁLOK! A tévé a tied!" <<endl;
+		}
+		else
+		{
+			cout << "Sajnálom, a tévé Péteré!" <<endl;		
+		}
+	}
+	while( true );
+
+	
+
+
+	return 0;
+}
